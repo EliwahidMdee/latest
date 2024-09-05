@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: php_app
+        volumes:
+            - .:/var/www/html
+            - /home/site/wwwroot:/var/www/html
+        ports:
+            - "8080:80"
+        environment:
+            - APACHE_DOCUMENT_ROOT=/var/www/html/public
+        networks:
+            - app-network
+
+    db:
+        image: mysql:8.0
+        container_name: mysql_db
+        restart: unless-stopped
+        environment:
+            MYSQL_DATABASE: laravel
+            MYSQL_USER: pjnntstcmi
+            MYSQL_PASSWORD: Ms@firi06
+            MYSQL_ROOT_PASSWORD: Ms@firi06
+        volumes:
+            - dbdata:/var/lib/mysql
+        networks:
+            - app-network
+
+volumes:
+    dbdata:
+
+networks:
+    app-network:
+        driver: bridge

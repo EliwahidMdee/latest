@@ -27,6 +27,10 @@ Route::post('register', [RegisterController::class, 'register']);
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
+Route::get('/', function () {
+    return redirect()->route('login');
+});
+
 // Admin role
 Route::group([], function () {
     Route::resource('appointments', AppointmentController::class);

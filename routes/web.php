@@ -6,7 +6,7 @@ return view('homepage');
 });
 
 Route::get('/doctors', function () {
-return 'Doctors Page';
+return view('doctors');
 });
 
 Route::get('/patients', function () {

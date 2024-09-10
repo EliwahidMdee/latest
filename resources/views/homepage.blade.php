@@ -231,19 +231,19 @@
         <i class="fas fa-bars"></i>
     </div>
     <ul>
-        <li><a href="{{ route('home') }}"><i class="fas fa-home icon"></i><span class="text">Home</span></a></li>
-        <li><a href="{{ route('doctors.index') }}"><i class="fas fa-user-md icon"></i><span class="text">Doctors</span></a></li>
-        <li><a href="{{ route('patients.index') }}"><i class="fas fa-user-injured icon"></i><span class="text">Patients</span></a></li>
-        <li><a href="{{ route('appointments.index') }}"><i class="fas fa-calendar-alt icon"></i><span class="text">Appointments</span></a></li>
-        <li><a href="{{ route('visits.index') }}"><i class="fas fa-notes-medical icon"></i><span class="text">Visits</span></a></li>
-        <li><a href="{{ route('labtechnicians.index') }}"><i class="fas fa-flask icon"></i><span class="text">Lab Technicians</span></a></li>
-        <li><a href="{{ route('labtests.index') }}"><i class="fas fa-vials icon"></i><span class="text">Lab Tests</span></a></li>
-        <li><a href="{{ route('pharmacists.index') }}"><i class="fas fa-pills icon"></i><span class="text">Pharmacists</span></a></li>
-        <li><a href="{{ route('prescriptions.index') }}"><i class="fas fa-prescription-bottle-alt icon"></i><span class="text">Prescriptions</span></a></li>
-        <li><a href="{{ route('cashiers.index') }}"><i class="fas fa-cash-register icon"></i><span class="text">Cashiers</span></a></li>
-        <li><a href="{{ route('payments.index') }}"><i class="fas fa-money-check-alt icon"></i><span class="text">Payments</span></a></li>
-        <li><a href="{{ route('services.index') }}"><i class="fas fa-concierge-bell icon"></i><span class="text">Services</span></a></li>
-        <li><a href="{{ route('receptionists.index') }}"><i class="fas fa-user-tie icon"></i><span class="text">Receptionists</span></a></li>
+        <li><a href="#"><i class="fas fa-home icon"></i><span class="text">Home</span></a></li>
+        <li><a href="#"><i class="fas fa-user-md icon"></i><span class="text">Doctors</span></a></li>
+        <li><a href="#"><i class="fas fa-user-injured icon"></i><span class="text">Patients</span></a></li>
+        <li><a href="#"><i class="fas fa-calendar-alt icon"></i><span class="text">Appointments</span></a></li>
+        <li><a href="#"><i class="fas fa-notes-medical icon"></i><span class="text">Visits</span></a></li>
+        <li><a href="#"><i class="fas fa-flask icon"></i><span class="text">Lab Technicians</span></a></li>
+        <li><a href="#"><i class="fas fa-vials icon"></i><span class="text">Lab Tests</span></a></li>
+        <li><a href="#"><i class="fas fa-pills icon"></i><span class="text">Pharmacists</span></a></li>
+        <li><a href="#"><i class="fas fa-prescription-bottle-alt icon"></i><span class="text">Prescriptions</span></a></li>
+        <li><a href="#"><i class="fas fa-cash-register icon"></i><span class="text">Cashiers</span></a></li>
+        <li><a href="#"><i class="fas fa-money-check-alt icon"></i><span class="text">Payments</span></a></li>
+        <li><a href="#"><i class="fas fa-concierge-bell icon"></i><span class="text">Services</span></a></li>
+        <li><a href="#"><i class="fas fa-user-tie icon"></i><span class="text">Receptionists</span></a></li>
     </ul>
     <button class="dark-mode-toggle" onclick="toggleDarkMode()">
         <i class="fas fa-moon"></i>
@@ -253,19 +253,14 @@
 <div class="content">
     <div class="user-panel">
         <i class="fas fa-user"></i>
-        <span class="user-name">{{ Auth::user()->name }}</span>
+        <span class="user-name">Default</span>
         <span class="toggle-btn" onclick="toggleDropdownMenu()">
             <i class="fas fa-ellipsis-v"></i>
         </span>
         <div class="dropdown-menu">
-            <a href="{{ route('password.request') }}">Change Password</a>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: inline;">
-                @csrf
-                <button type="submit" class="logout-btn">Logout</button>
-            </form>
+            <a href="#">Change Password</a>
         </div>
     </div>
-    @yield('content')
 </div>
 
 <script>
@@ -302,6 +297,6 @@
 </body>
 </html>
     <h1 style="display: flex; align-items: center; font-size: 24px; color: #6a11cb; margin-bottom: 20px;">
-        <i class="fas fa-home" style="margin-right: 10px;"></i> Home
+        <i class="fas fa-home" style="margin-right: 10px; position: absolute;"></i> Home
     </h1>
     <p>Welcome to the Hospital Management System. Use the navigation bar to access different sections.</p>

@@ -10,7 +10,7 @@ return view('doctors');
 });
 
 Route::get('/patients', function () {
-return 'Patients Page';
+return view('patients');
 });
 
 Route::get('/appointments', function () {

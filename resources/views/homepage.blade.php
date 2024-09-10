@@ -293,6 +293,5 @@
         }
     });
 </script>
-<p>Welcome to the Hospital Management System. Use the navigation bar to access different sections.</p>
 </body>
 </html>
